@@ -154,7 +154,7 @@ header {
   display: inline-block;
   float: left;
   padding-left: 10px;
-  line-height: 23px;
+  line-height: 23px; 
 }
 
 .item-desc {
@@ -166,4 +166,12 @@ header {
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
+}
+
+body {
+ background: image_url('greek-vase.png'); 
+}
+
+.alert { 
+  margin-bottom: 0;
 }

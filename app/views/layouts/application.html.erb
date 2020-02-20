@@ -57,12 +57,17 @@
     </nav>
 
     <% if notice.present? %>
-      <p class="alert alert-info"><%= notice %></p>
+      <p class="alert alert-success"><%= notice %></p>
     <% end %>
-    <% if notice.present? %>
+    <% if alert.present? %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
     <%= yield %>
   </body>
 </html>
+
+
+<script>
+    setTimeout("$('.alert').fadeOut('slow')", 3000)
+</script>
