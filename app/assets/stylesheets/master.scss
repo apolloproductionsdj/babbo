@@ -146,6 +146,8 @@ header {
   float: left;
   font-size: 16px;
   text-transform: uppercase;
+  position: relative;
+  left: 125px;
 }
 
 .item-price {
@@ -155,12 +157,17 @@ header {
   float: left;
   padding-left: 10px;
   line-height: 23px; 
+  position: relative;
+  left: 125px;
 }
 
 .item-desc {
   clear: both;
   color: #000;
   margin-bottom: 20px;
+  margin-top: -60px;
+  position: relative;
+  left: 125px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -174,4 +181,13 @@ body {
 
 .alert { 
   margin-bottom: 0;
+}
+
+.image-resize {
+  width: 10%;
+  height: 150px;
+  position: relative;
+  top: 0px;
+  left: -450px;
+
 }
