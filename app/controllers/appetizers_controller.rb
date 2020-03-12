@@ -1,0 +1,5 @@
+class AppetizersController < ApplicationController
+
+
+
+end
