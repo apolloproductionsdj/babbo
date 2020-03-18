@@ -257,5 +257,38 @@ body {
   position: flex;
 }
 
+.app-link {
+  color: #b03030;
+  text-decoration: none;
+  font-size: 30px;
+}
 
+a.app-link:link {
+   color: #b03030;
+   text-decoration: none;
+}
 
+a.app-link:visited {
+   color: #b03030;
+   text-decoration: none;
+}
+
+a.app-link:hover {
+   color: #b03030;
+   text-decoration: none;
+}
+
+a.app-link:active {
+   color: #b03030;
+   text-decoration: none;
+}
+
+.follow {
+  position: fixed;
+  color: #eb212e;
+  text-decoration: none;
+}
+
+.follow:hover {
+  color: #eb212e;
+}
