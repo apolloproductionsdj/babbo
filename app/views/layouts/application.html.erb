@@ -1,41 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Babbo</title>
+    <title>Pets Forever Portraits</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
    
-    <nav class="navbar navbar-toggleable-md navbar-light ">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-toggleable-md">
+      <button class="navbar-toggler navbar-toggler-right navbar-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
       </button>
       
-      <a class="navbar-brand" href="/"><img src= "/assets/babbo_logo.png" width="125" height="60" class="d-inline-block align-top" alt="">
+      <a class="navbar-brand logo" href="/">Pets Forever Portraits
       </a>
       
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/menus/show">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Order Online</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Locations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Catering/Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Gift Cards</a>
-          </li>
+          <div class="dropdown">
+            <li class="nav-item">
+              <button onclick="myFunction()" class="dropbtn">Contact Us</button>
+            </li>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#home">Phone Number</a>
+              <a href="#about">Address</a>
+              <a href="#contact">Social Media</a>
+            </div>
+          </div>
+            <div class="dropdown">
+            <li class="nav-item">
+              <button onclick="myFunction1()" class="dropbtn">About Us</button>
+            </li>
+            <div id="myDropdown1" class="dropdown-content">
+              <a href="#home">Our Story</a>
+              <a href="#about">Our Mission</a>
+              <a href="#contact">Giving To Our Community</a>
+            </div>
+          </div>
+            <div class="dropdown">
+            <li class="nav-item">
+              <button onclick="myFunction2()" class="dropbtn">Galleries</button>
+            </li>
+            <div id="myDropdown2" class="dropdown-content">
+              <a href="#home">Dogs</a>
+              <a href="#about">Cats</a>
+              <a href="#contact">Other Pets</a>
+            </div>
+          </div>
+            <div class="dropdown">
+            <li class="nav-item">
+              <button onclick="myFunction3()" class="dropbtn">Pricing</button>
+            </li>
+            <div id="myDropdown3" class="dropdown-content">
+              <a href="#home">At Our Studio</a>
+              <a href="#about">At Your House</a>
+              <a href="#contact">Destination Location</a>
+            </div>
+          </div>
+            <div class="dropdown">
+            <li class="nav-item">
+              <button onclick="myFunction4()" class="dropbtn">Blog</button>
+            </li>
+            <div id="myDropdown4" class="dropdown-content">
+              <a href="#home">By: Mike Torres</a>
+              <a href="#about">By: Professor Heath</a>
+              <a href="#contact">By: Other Professionals</a>
+            </div>
+          </div>
         </ul>
         <ul class="navbar-nav">
           <% if user_signed_in? %>
@@ -69,5 +105,40 @@
 
 
 <script>
-    setTimeout("$('.alert').fadeOut('slow')", 3000)
+  setTimeout("$('.alert').fadeOut('slow')", 3000)
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+function myFunction2() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+function myFunction3() {
+  document.getElementById("myDropdown3").classList.toggle("show");
+}
+
+function myFunction4() {
+  document.getElementById("myDropdown4").classList.toggle("show");
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 </script>
