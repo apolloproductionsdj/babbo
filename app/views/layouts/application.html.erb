@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <meta name="description" content="Hi Professor Heath! Pets Forever Portraits is the #1 rated mobile Pet Photographers in Miami, FL">
   </head>
 
   <body>
@@ -17,8 +17,8 @@
        <span class="navbar-toggler-icon"></span>
       </button>
       
-      <a class="navbar-brand logo" href="/">Pets Forever Portraits
-      </a>
+      <h1><a class="navbar-brand logo" href="/">Pets Forever Portraits
+      </a></h1>
       
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -100,6 +100,9 @@
     <% end %>
 
     <%= yield %>
+    <div class="footer">
+  <p>Footer</p>
+</div>
   </body>
 </html>
 

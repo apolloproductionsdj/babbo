@@ -361,11 +361,21 @@ a.app-link:active {
   cursor: pointer;
   margin: 5px;
   color: white;
+  border-color: black;
+
 }
 
 .dropbtn:hover, .dropbtn:focus {
   background-color: #black;
+
 }
+
+ .dropbtn:active, 
+ .dropbtn:focus 
+ {
+     border:0.0em solid #00c; /* here configure as your needs */
+     color:#00c;
+  }
 
 .dropdown {
   position: relative;
@@ -430,6 +440,13 @@ h3 {
  
 }
 
-.navbar-toggler {
-  
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+
 }
