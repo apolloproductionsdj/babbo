@@ -27,9 +27,9 @@
               <button onclick="myFunction()" class="dropbtn">Contact Us</button>
             </li>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#home">Phone Number</a>
-              <a href="#about">Address</a>
-              <a href="#contact">Social Media</a>
+              <a href="#phone_number">Phone Number</a>
+              <a href="#address">Address</a>
+              <a href="#social_media">Social Media</a>
             </div>
           </div>
             <div class="dropdown">
@@ -37,9 +37,9 @@
               <button onclick="myFunction1()" class="dropbtn">About Us</button>
             </li>
             <div id="myDropdown1" class="dropdown-content">
-              <a href="#home">Our Story</a>
-              <a href="#about">Our Mission</a>
-              <a href="#contact">Giving To Our Community</a>
+              <a href="#our_story">Our Story</a>
+              <a href="#our_mission">Our Mission</a>
+              <a href="#community">Giving To Our Community</a>
             </div>
           </div>
             <div class="dropdown">
@@ -47,9 +47,9 @@
               <button onclick="myFunction2()" class="dropbtn">Galleries</button>
             </li>
             <div id="myDropdown2" class="dropdown-content">
-              <a href="#home">Dogs</a>
-              <a href="#about">Cats</a>
-              <a href="#contact">Other Pets</a>
+              <a href="#dogs">Dogs</a>
+              <a href="#cats">Cats</a>
+              <a href="#other pets">Other Pets</a>
             </div>
           </div>
             <div class="dropdown">
@@ -57,9 +57,9 @@
               <button onclick="myFunction3()" class="dropbtn">Pricing</button>
             </li>
             <div id="myDropdown3" class="dropdown-content">
-              <a href="#home">At Our Studio</a>
-              <a href="#about">At Your House</a>
-              <a href="#contact">Destination Location</a>
+              <a href="#at_our_studio">At Our Studio</a>
+              <a href="#at_your_house">At Your House</a>
+              <a href="#destination_location">Destination Location</a>
             </div>
           </div>
             <div class="dropdown">
@@ -67,26 +67,26 @@
               <button onclick="myFunction4()" class="dropbtn">Blog</button>
             </li>
             <div id="myDropdown4" class="dropdown-content">
-              <a href="#home">By: Mike Torres</a>
-              <a href="#about">By: Professor Heath</a>
-              <a href="#contact">By: Other Professionals</a>
+              <a href="#mike_torres">By: Mike Torres</a>
+              <a href="#professor_heath">By: Professor Heath</a>
+              <a href="#mco_562">By: Other MCO 562 Professionals</a>
             </div>
           </div>
         </ul>
         <ul class="navbar-nav">
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to 'My Profile', user_path(current_user), class: 'nav-link'%>
+              <%= link_to 'Welcome Back', user_path(current_user), class: 'nav-link'%>
             </li>
             <li class="nav-item">
               <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
             </li>
           <% else %>
             <li class="nav-item">
-              <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+              <%= link_to 'Booked Clients', new_user_session_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+              <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-link' %>
           <% end %> 
         </ul>
       </div>
